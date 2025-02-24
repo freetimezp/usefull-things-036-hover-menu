@@ -9,3 +9,81 @@
 a {
     text-decoration: none;
 }
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    text-transform: uppercase;
+    background: #121212;
+    overflow: hidden;
+}
+
+.project-title h1 {
+    font-weight: 300;
+}
+
+.project-categ {
+    font-weight: lighter;
+}
+.project-categ h1 {
+    font-size: 16px;
+    color: #848080;
+}
+
+
+.cursor {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px; 
+    background: url(../images/image-01.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 180px auto;
+    height: 100%;
+}
+
+.project {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 1;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    mix-blend-mode: difference;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
