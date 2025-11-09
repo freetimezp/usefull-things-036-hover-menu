@@ -1,7 +1,8 @@
-var $cursor = $(".cursor");
-var $overlay = $(".project-overlay");
 
-function moveCircle(e) {
+var $cursor = $(".cursor");
+var $overlay = $(".overlay");
+
+function moveMouse(e) {
     TweenLite.to($cursor, 0.5, {
         css: {
             left: e.pageX,
@@ -9,7 +10,8 @@ function moveCircle(e) {
         },
         delay: 0.03
     });
-};
+}
+
 
 $(".p-1").hover(function () {
     $(".cursor").css({ "background-image": "url('./assets/images/image-01.jpg')" });
@@ -24,21 +26,16 @@ $(".p-4").hover(function () {
     $(".cursor").css({ "background-image": "url('./assets/images/image-04.jpg')" });
 });
 
-var flag = false;
 
 $($overlay).mousemove(function () {
-    flag = true;
     TweenLite.to($cursor, 0.3, { scale: 1, autoAlpha: 1 });
-    $($overlay).on("mousemove", moveCircle);
+
+    $($overlay).on("mousemove", moveMouse);
 });
 
 $($overlay).mouseout(function () {
-    flag = false;
     TweenLite.to($cursor, 0.3, { scale: 0.1, autoAlpha: 0 });
 });
-
-
-
 
 
 
